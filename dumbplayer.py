@@ -7,9 +7,9 @@ class Player:
     # PARAMS:
 
     #  money_payout_rates:
-    #   This is a 50x50 2D array of floats between 0.0 and 1.0 that tell your bot how much fatty seed this each area of the board produces.
-    #   Nutricious seed is the inverse of the fatty seed and follow the formula nutricious_rate = 1.0 - fatty_rate.
-    #   This means areas high in fatty seed are low in nutricious feed and visa versa
+    #   This is a 50x50 2D array of floats between 0.0 and 1.0 that tell your bot how money per turn this spot produces
+    #   Food production is the inverse of money production and follow the formula food_payout_rate = 1.0 - money_payout_rate
+    #   This means areas that produce a lot of money, produce less food
 
     #  my_spawn_point:
     #   An (x, y) tuple of where your new chickens will hatch each turn
