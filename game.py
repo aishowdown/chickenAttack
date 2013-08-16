@@ -55,6 +55,20 @@ for i in range(NUM_TURNS):
 
     json_data['turns'].append(m.board_state_for_json())
 
+
+print '---- FINAL SCORE ----'
+print '%s:\t%f' % (sys.argv[1], m.p1_money)
+print '%s:\t%f' % (sys.argv[2], m.p2_money)
+print
+
+winner = sys.argv[1]
+if m.p1_money > m.p2_money:
+    print 'WINNER: %s' % sys.argv[1]
+elif m.p1_money < m.p2_money:
+    print 'WINNER: %s' % sys.argv[2]
+else:
+    print 'TIED!'
+
 # Save the game log to disk for visualization later
 json_str = json.dumps(json_data)
 with open('game_log.js', 'w') as f:
