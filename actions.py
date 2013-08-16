@@ -5,9 +5,9 @@ Order = namedtuple('Order', ['starting_position', 'quantity', 'direction'])
 """ Action codes for moving your guys """
 STAY = 0
 UP = 1
-RIGHT = 4
+RIGHT = 2
 DOWN = 3
-LEFT = 0
+LEFT = 4
 
 ALL_ACTIONS = [ STAY, RIGHT, DOWN, LEFT, UP ]
 
