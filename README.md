@@ -29,7 +29,7 @@ Running a game
 
 python game.py mybot1.py mybot2.py
 
-    This updates viz.html with the game data.  If you open viz.html in your browser you can see a game unfold.  (You might want to decrease the NUM_TURNS in game.py to make games load faster)
+    If you open viz.html in your browser you can see a game unfold.
 
 Competition
     The final competition will take place next Saterday, August 24th at 2pm Est.  It will be a double elimination style competition, and the results of each round will be viewable on www.aishowdown.com.  Every evening preceding the competition we will run practice rounds, upload your bot to the website to get insight in what other people are creating.
