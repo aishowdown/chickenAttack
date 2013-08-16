@@ -318,9 +318,21 @@
 
       <div class='content' style='width:1000px;'>
         <canvas id='canvas' width='500' height='600'></canvas>
-        <input id='pause' type='submit' value='&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;'/>
-        <input id='left' type='submit' value='<-'/>
-        <input id='right' type='submit' value='->'/>
+        <div>
+          <input id='pause' type='submit' value='&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;'/>
+          <input id='left' type='submit' value='<-'/>
+          <input id='right' type='submit' value='->'/>
+        </div>
+        <div>
+          <h2>key</h2>
+          <span style='color: rgb(255,0,0)'>Number of Red Players</span><br />
+          <span style='color: rgb(0,0,255)'>Number of Blue Players</span><br />
+          <span style='color: rgba(255, 133, 133, 1)'>Number of Gold Red has</span><br />
+          <span style='color: rgba(133, 212, 255, 1)'>Number of Gold Blue has</span><br />
+          <span>* The bars in the top left indicate the rate at which players are earning the above</span><br />
+          <span>\/ Submit json below to run it instead</span>
+        </div>
+
         <br /><br /><br />
         <textarea style='width:1000px; height:400px;' class='replace'></textarea>
         <input id='run' type='submit' />
