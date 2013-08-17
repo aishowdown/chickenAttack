@@ -37,6 +37,6 @@ class NetworkPlayer():
         #This can be cleaned up
 
         for order in jsonOrders:
-            orders[(order[0], order[1]), order[3]] = order[3]
+            orders[(order[0], order[1]), order[2]] = order[3]
 
         return orders;
