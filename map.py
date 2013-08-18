@@ -96,7 +96,7 @@ class Map:
         for (x, y), direction in p1_actions:
             quantity = int(p1_actions[((x, y), direction)])
             if direction not in actions.ALL_ACTIONS: continue
-            if self.p1_guys >= quantity:
+            if self.p1_guys[x][y] >= quantity:
                 new_x, new_y = actions.next_pos((x, y), direction)
                 if self.__is_on_board((new_x, new_y)):
                     new_p1_guys[new_x][new_y] += quantity
@@ -104,7 +104,7 @@ class Map:
         for (x, y), direction in p2_actions:
             quantity = int(p2_actions[((x, y), direction)])
             if direction not in actions.ALL_ACTIONS: continue
-            if self.p2_guys >= quantity:
+            if self.p2_guys[x][y] >= quantity:
                 new_x, new_y = actions.next_pos((x, y), direction)
                 if self.__is_on_board((new_x, new_y)):
                     new_p2_guys[new_x][new_y] += quantity
