@@ -31,6 +31,8 @@ else:
 
 
 m = Map()
+p1_crashed = False
+p2_crashed = False
 p1 = Player1(*m.constructor_data_for_p1())
 p2 = Player2(*m.constructor_data_for_p2())
 
@@ -42,8 +44,15 @@ for i in range(NUM_TURNS):
     print 'Turn #%d' % i
 
     # Get the players' actions
-    p1_actions = p1.take_turn(*m.turn_data_for_p1())
-    p2_actions = p2.take_turn(*m.turn_data_for_p2())
+    try:
+        p1_actions = [] if p1_crashed else p1.take_turn(*m.turn_data_for_p1())
+    except:
+        p1_crashed = True
+
+    try:
+        p2_actions = [] if p2_crashed else p2.take_turn(*m.turn_data_for_p2())
+    except:
+        p2_crashed = True
 
     m.apply_moves(p1_actions, p2_actions)
     m.resolve_combat()
