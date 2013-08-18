@@ -3,7 +3,7 @@ from collections import namedtuple
 Order = namedtuple('Order', ['starting_position', 'quantity', 'direction'])
 
 """ Action codes for moving your guys """
-STAY = 0
+STAY = 5
 UP = 1
 RIGHT = 2
 DOWN = 3
