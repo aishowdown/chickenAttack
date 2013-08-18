@@ -18,7 +18,7 @@ class Player:
     #   An (x, y) tuple of where your opponent's chickens will hatch each turn
 
     def __init__(self, money_payout_rates, my_spawn_point, their_spawn_point):
-        self.money_payout_rates = money_payout_rates,
+        self.money_payout_rates = money_payout_rates
         self.my_spawn_point = my_spawn_point
         self.their_spawn_point = their_spawn_point
 
