@@ -2,6 +2,7 @@ import sys
 import json
 import re
 import httplib, urllib
+from traceback import print_exc
 from functools import partial
 
 from networkplayer import NetworkPlayer
@@ -12,6 +13,7 @@ import actions
 NUM_TURNS = 1000
 STARTING_MONEY = 100
 
+PRINT_TRACE = False
 
 if len(sys.argv) != 3:
     print "Usage: %s player1_module player2_module" % sys.argv[0]
@@ -47,11 +49,13 @@ for i in range(NUM_TURNS):
     try:
         p1_actions = [] if p1_crashed else p1.take_turn(*m.turn_data_for_p1())
     except:
+        if PRINT_TRACE: print_exc()
         p1_crashed = True
 
     try:
         p2_actions = [] if p2_crashed else p2.take_turn(*m.turn_data_for_p2())
     except:
+        if PRINT_TRACE: print_exc()
         p2_crashed = True
 
     m.apply_moves(p1_actions, p2_actions)
