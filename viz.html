@@ -102,7 +102,7 @@
               for(var turn = 0; turn<json.turns.length; turn++){
                   var total = 0;
                   for(var p1 = 0; p1<json.turns[turn].p1g.length; p1++){
-                     total += json.turns[turn].p1g[p1][2];
+                     total += parseInt(json.turns[turn].p1g[p1]);
                   }
 
 
