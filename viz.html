@@ -85,7 +85,7 @@
 
                   total = 0;
                   for(var p1 = 0; p1<json.turns[turn].p2g.length; p1++){
-                     total += json.turns[turn].p2g[p1][2];
+                     total += parseInt(json.turns[turn].p2g[p1]);
                   }
                   if (total > max){
                     max = total
